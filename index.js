@@ -56,7 +56,7 @@ async function isNew(userId, inviterId) {
       const inviterSnap = await getDoc(inviterRef);
       await updateDoc(inviterRef, {
         invitedUsers: arrayUnion(userId),
-        balance: inviterSnap.data().balance + 1000,
+        balance: inviterSnap.data().balance + 3,
       });
     }
     return true; // New user added
@@ -155,7 +155,7 @@ Va qayta /start bosing.`
       if (docSnap.exists()) {
         ctx.reply(
           `
-Do'stingizni taklif qilsangiz, har bir do'stingiz uchun 1000 Ball olasiz.
+Do'stingizni taklif qilsangiz, har bir do'stingiz uchun 3 Ball olasiz.
 BALL orqali siz kurslarga a'zo bo'lishingiz mumkin.
 
 Sizning taklif qilgan do'stlaringiz soni: ${docSnap.data().invitedUsers.length}
