@@ -235,7 +235,7 @@ Va qayta /start bosing.`
     const userRef = doc(db, "users", String(ctx.from.id));
     const userSnap = await getDoc(userRef);
     if (docSnap.exists()) {
-      if (userSnap.exists() && userSnap.data().balance > 5000) {
+      if (userSnap.exists() && userSnap.data().balance > 99) {
         const courses = docSnap.data().courses;
         let message = "Kurslar ro'yxati:\n\n";
 
