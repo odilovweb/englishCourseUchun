@@ -251,8 +251,8 @@ Link: ${course.link}\n`;
 
         courses.forEach((course, index) => {
           message += `${index + 1}. ${course.name} - ${course.price} BALL \n`;
-          message += `\n Sizning balansingiz kurs narxiga yetganda kanal linklari ko'rina boshlaydi hozir esa ko'proq ball yig'ing. /invite bosing \n\n`;
         });
+        message += `\n Sizning balansingiz kurs narxiga yetganda kanal linklari ko'rina boshlaydi hozir esa ko'proq ball yig'ing. /invite bosing \n\n`;
         ctx.reply(message);
       }
     } else {
