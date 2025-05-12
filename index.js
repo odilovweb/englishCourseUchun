@@ -91,7 +91,12 @@ Va qayta /start bosing.`
     const isNewUser = await isNew(ctx.from.id, inviterId);
     ctx.reply(
       `Salom ${ctx.from.first_name}, botimizga xush kelibsiz! Ushbu bot orqali siz kurslarimizga a'zo bo'lishingiz mumkin.
-      
+
+Siz ushbu bot orqali 2 mln so'mlik kurslarni tekinga qo'lga kiritishingiz mumkin.
+
+1 mln so'mlik kurs - 5 ta referral
+2 mln so'mlik kurs - 10 ta referral
+
 Batafsil ma'lumot uchun /help buyrug'ini bosing.`
     );
   }
