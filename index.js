@@ -56,7 +56,7 @@ async function isNew(userId, inviterId) {
       const inviterSnap = await getDoc(inviterRef);
       await updateDoc(inviterRef, {
         invitedUsers: arrayUnion(userId),
-        balance: inviterSnap.data().balance + 3,
+        balance: inviterSnap.data().balance + 1,
       });
     }
     return true; // New user added
@@ -155,7 +155,7 @@ Va qayta /start bosing.`
       if (docSnap.exists()) {
         ctx.reply(
           `
-Do'stingizni taklif qilsangiz, har bir do'stingiz uchun 3 Ball olasiz.
+Do'stingizni taklif qilsangiz, har bir do'stingiz uchun 1 Ball olasiz.
 BALL orqali siz kurslarga a'zo bo'lishingiz mumkin.
 
 Sizning taklif qilgan do'stlaringiz soni: ${docSnap.data().invitedUsers.length}
@@ -235,7 +235,7 @@ Va qayta /start bosing.`
     const userRef = doc(db, "users", String(ctx.from.id));
     const userSnap = await getDoc(userRef);
     if (docSnap.exists()) {
-      if (userSnap.exists() && userSnap.data().balance > 45) {
+      if (userSnap.exists() && userSnap.data().balance > 3) {
         const courses = docSnap.data().courses;
         let message = "Kurslar ro'yxati:\n\n";
 
