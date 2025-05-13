@@ -109,12 +109,29 @@ Referral link olish uchun /invite buyrug'ini bosing.
 
 Batafsil ma'lumot uchun /help buyrug'ini bosing.`
     );
+
+    const text = `🎉Diqqat super yangilik jigarlar
+    
+🔥Siz endi 2 mln so'mlik kurslarni tekinga qo'lga kiritishingiz mumkin.
+Buning uchun quyidagi botga kiring, vaqt chegaralngan ulgurib qoling ⌛
+
+🔗https://t.me/${ctx.botInfo.username}?start=${ctx.from.id}`;
     ctx.replyWithPhoto(
       {
         url: "https://media-hosting.imagekit.io/7ef5ffb8fc354e5d/ChatGPT%20Image%20May%2013,%202025,%2003_02_14%20PM.png?Expires=1841738547&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=W1vm5OzewVWVgLQcGkVcgmjpD4Aj-sL2d~yvY57XlBFjWUJVm600l-15bRIHWKnou1PFzDR9GBgz5t9kGabGBPhLukE7DF6ly9Zuf5LDf82qdrhr1HcgU9v97yeHtLkv9RcA1TNLcVRRzHnTiZPUwe2S1adMNGzXSsOUjBvytDo6tmn~e-Y2qYGB9xHt4EnJka9s~zk7k7PJESYfSZD57fxcav7f6WoMW10bbCTAu~K-zOrzJe1oQ0WHdL06s9ofFzvTq3Lz40YlL6seeMt7XwKvYeJ2VylPZqxLiKegwrUJLMj55RuWQl5Ye69RhQNrQe-CK3N3Y408kVwId5elZQ__",
       },
       {
         caption: `Sizning referal havolangiz: https://t.me/${ctx.botInfo.username}?start=${ctx.from.id}`,
+        reply_markup: {
+          inline_keyboard: [
+            [
+              {
+                text: "Share this text",
+                url: `https://t.me/share/url?url=${encodeURIComponent(text)}`,
+              },
+            ],
+          ],
+        },
       }
     );
   }
