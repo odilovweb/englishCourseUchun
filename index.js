@@ -126,7 +126,7 @@ Buning uchun quyidagi botga kiring, vaqt chegaralngan ulgurib qoling ⌛
           inline_keyboard: [
             [
               {
-                text: "Share this text",
+                text: "Yaqinlarga ulashish ➡",
                 url: `https://t.me/share/url?url=${encodeURIComponent(text)}`,
               },
             ],
