@@ -10,6 +10,7 @@ const {
   arrayUnion,
   getFirestore,
 } = require("firebase/firestore");
+
 // Import the functions you need from the SDKs you need
 // import { getAnalytics } from "firebase/analytics";
 // // TODO: Add SDKs for Firebase products that you want to use
@@ -80,6 +81,13 @@ bot.telegram.setMyCommands([
 
 bot.start(async (ctx) => {
   const isMember = await checkMembership(ctx.from.id);
+  try {
+    await ctx.replyWithPhoto({
+      url: "https://media-hosting.imagekit.io/7c3fb0fd206b4146/ChatGPT%20Image%20May%2013,%202025,%2002_26_36%20PM.png?Expires=1841737392&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=u1~nH0EGLpPOAkenl40TAEyKMO5aL284Wwm1HixlU0hAveZbkRUPS7D79tKZvWcqZccYRiHriSBf96714HxAA5hNmBXU-zZdu5O3-I9P8lOaR~I9S9GSqtvRv94Qchnq5R8FL2lBfq8q-XEyY6B0Srq4nlt1bwQjofyfnQ7p2wr4CQ1Ig7Xffsie5~VAWBX2bo1CJ22eBOwsJshCMTgvJcYrChI2HohrgYx~T9T-wQASyoVHVuGdjyZDOdQADO1BJ5oEHuvPDvMcnanxG0sYwc9MQf6~V2JOxSGK1E5Lo6gGDsDvxKBUZef1Ua~keY6R2RHnT6nET4m~RiIaWhrzPA__",
+    });
+  } catch (error) {
+    console.log("Error checking membership:", error);
+  }
   if (!isMember) {
     ctx.reply(
       `Salom ${ctx.from.first_name}, botimizdan foydalanish uchun ${REQUIRED_CHANNEL} kanaliga obuna bo'lishingiz kerak.
