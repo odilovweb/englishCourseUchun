@@ -105,6 +105,8 @@ Siz ushbu bot orqali 2 mln so'mlik kurslarni tekinga qo'lga kiritishingiz mumkin
 1 mln so'mlik kurs - 5 ta referral
 2 mln so'mlik kurs - 10 ta referral
 
+Referral link olish uchun /invite buyrug'ini bosing.
+
 Batafsil ma'lumot uchun /help buyrug'ini bosing.`
     );
   }
