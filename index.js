@@ -94,6 +94,10 @@ bot.start(async (ctx) => {
       
 Va qayta /start bosing.`
     );
+
+    if (!Inviters.has(ctx.from.id)) {
+      Inviters.set(ctx.from.id, ctx.payload);
+    }
   } else {
     const inviterId = Inviters.get(ctx.from.id);
     const isNewUser = await isNew(ctx.from.id, inviterId);
@@ -135,8 +139,6 @@ Buning uchun quyidagi botga kiring, vaqt chegaralangan ulgurib qoling ⌛
       }
     );
   }
-
-  Inviters.set(ctx.from.id, ctx.payload);
 });
 
 bot.command("help", async (ctx) => {
