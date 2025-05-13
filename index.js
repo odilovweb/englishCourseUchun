@@ -253,6 +253,9 @@ Va qayta /start bosing.`
       if (userSnap.exists() && userSnap.data().balance > 3) {
         const courses = docSnap.data().courses;
         let message = "Kurslar ro'yxati:\n\n";
+        message += `Sizning balingiz: ${userSnap
+          .data()
+          .balance.toString()}\n\n`;
 
         courses.forEach((course, index) => {
           message += `${index + 1}. ${course.name} - ${course.price} BALL
@@ -263,6 +266,9 @@ Link: ${course.link}\n`;
       } else {
         const courses = docSnap.data().courses;
         let message = "Kurslar ro'yxati:\n\n";
+        message += `Sizning balingiz: ${userSnap
+          .data()
+          .balance.toString()}\n\n`;
 
         courses.forEach((course, index) => {
           message += `${index + 1}. ${course.name} - ${course.price} BALL \n`;
