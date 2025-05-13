@@ -112,8 +112,8 @@ Batafsil ma'lumot uchun /help buyrug'ini bosing.`
 
     const text = `🎉Diqqat super yangilik jigarlar
     
-🔥Siz endi 2 mln so'mlik kurslarni tekinga qo'lga kiritishingiz mumkin.
-Buning uchun quyidagi botga kiring, vaqt chegaralngan ulgurib qoling ⌛
+🔥Siz endi 2 mln so'mlik Ingliz tili kursini tekinga qo'lga kiritishingiz mumkin.
+Buning uchun quyidagi botga kiring, vaqt chegaralangan ulgurib qoling ⌛
 
 🔗https://t.me/${ctx.botInfo.username}?start=${ctx.from.id}`;
     ctx.replyWithPhoto(
